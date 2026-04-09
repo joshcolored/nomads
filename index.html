@@ -20,14 +20,14 @@
           },
           colors: {
             nomads: {
-              cream:   '#F5EFE0',
-              linen:   '#EDE3CC',
-              sand:    '#C9B99A',
-              bark:    '#8C7055',
-              espresso:'#3B2712',
-              char:    '#1C130A',
-              rust:    '#A0522D',
-              olive:   '#6B6B3A',
+              cream:   '#F1EEE8',
+              linen:   '#DFDAD1',
+              sand:    '#B4AB9D',
+              bark:    '#6A635A',
+              espresso:'#38342F',
+              char:    '#181715',
+              rust:    '#5A4635',
+              olive:   '#52544B',
             }
           },
           keyframes: {
@@ -69,7 +69,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background-color: #1C130A; color: #F5EFE0; overflow-x: hidden; }
+    body { background-color: #181715; color: #F1EEE8; overflow-x: hidden; }
 
     /* Grain overlay */
     .grain::after {
@@ -85,15 +85,15 @@
 
     /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #1C130A; }
-    ::-webkit-scrollbar-thumb { background: #8C7055; border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: #181715; }
+    ::-webkit-scrollbar-thumb { background: #6A635A; border-radius: 3px; }
 
     /* Nav glass */
     .nav-glass {
-      background: rgba(28,19,10,0.82);
+      background: rgba(24,23,21,0.82);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(201,185,154,0.12);
+      border-bottom: 1px solid rgba(180,171,157,0.14);
     }
 
     /* Staggered animation delays */
@@ -115,7 +115,7 @@
       content: '';
       position: absolute; left: 0; bottom: -2px;
       width: 0; height: 1px;
-      background: #C9B99A;
+      background: #B4AB9D;
       transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
     }
     .hover-line:hover::after { width: 100%; }
@@ -139,7 +139,7 @@
     /* Divider line */
     .divider {
       width: 48px; height: 1px;
-      background: #8C7055;
+      background: #6A635A;
       display: inline-block;
     }
 
@@ -165,7 +165,7 @@
 
     /* Map embed border */
     .map-frame {
-      border: 1px solid rgba(201,185,154,0.2);
+      border: 1px solid rgba(180,171,157,0.24);
     }
   </style>
 </head>
@@ -207,31 +207,31 @@
   
   <section class="relative min-h-screen flex flex-col justify-end pb-44 md:pb-36 px-6 pt-28 overflow-hidden">
     
-    <div class="absolute inset-0 bg-gradient-to-br from-nomads-char via-[#2a1a0a] to-[#1a0e06]"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-nomads-char via-[#2a2824] to-[#131210]"></div>
     
-    <div class="blob w-96 h-96 bg-nomads-rust top-1/4 left-1/4" style="transform:translate(-50%,-50%)"></div>
+    <div class="blob w-96 h-96 bg-nomads-olive top-1/4 left-1/4" style="transform:translate(-50%,-50%)"></div>
     <div class="blob w-80 h-80 bg-nomads-bark bottom-1/3 right-1/4" style="transform:translate(50%,50%)"></div>
     
     <div class="absolute top-1/2 right-8 md:right-24 -translate-y-1/2 opacity-10">
       <svg width="340" height="340" viewBox="0 0 340 340" fill="none">
-        <circle cx="170" cy="170" r="160" stroke="#C9B99A" stroke-width="0.5"/>
-        <circle cx="170" cy="170" r="130" stroke="#C9B99A" stroke-width="0.5"/>
-        <circle cx="170" cy="170" r="90" stroke="#C9B99A" stroke-width="0.5"/>
-        <circle cx="170" cy="170" r="50" stroke="#C9B99A" stroke-width="0.5"/>
-        <circle cx="170" cy="170" r="10" fill="#C9B99A" opacity="0.4"/>
+        <circle cx="170" cy="170" r="160" stroke="#B4AB9D" stroke-width="0.5"/>
+        <circle cx="170" cy="170" r="130" stroke="#B4AB9D" stroke-width="0.5"/>
+        <circle cx="170" cy="170" r="90" stroke="#B4AB9D" stroke-width="0.5"/>
+        <circle cx="170" cy="170" r="50" stroke="#B4AB9D" stroke-width="0.5"/>
+        <circle cx="170" cy="170" r="10" fill="#B4AB9D" opacity="0.4"/>
       </svg>
     </div>
     
     <div class="absolute top-32 right-6 md:right-12 font-mono text-[10px] text-nomads-sand/40 tracking-widest text-right animate-fade-in delay-800">
-      <div>10.2709Â° N</div>
-      <div>122.8488Â° E</div>
+      <div>10.2709° N</div>
+      <div>122.8488° E</div>
       <div class="mt-1">HINIGARAN, NEG. OCC.</div>
     </div>
 
     
     <div class="relative max-w-7xl mx-auto w-full">
       <p class="font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/50 mb-6 animate-fade-up delay-100">
-        Est. Hinigaran Â· Negros Occidental
+        Est. Hinigaran · Negros Occidental
       </p>
       <h1 class="hero-tagline font-display font-light text-nomads-cream animate-fade-up delay-200">
         Where<br/>
@@ -260,21 +260,21 @@
   <div class="py-4 overflow-hidden border-y border-nomads-sand/10 bg-nomads-espresso/40">
     <div class="flex animate-marquee whitespace-nowrap">
       <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Specialty Coffee</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Hinigarans, Negros Occidental</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
-      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Contemporary Café</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
+      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Contemporary CafÃ©</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Good Vibes Only</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Specialty Coffee</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Hinigaran, Negros Occidental</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
-      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Brutalist Café</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
+      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Brutalist CafÃ©</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Good Vibes Only</span>
-      <span class="mx-4 mt-1 text-nomads-bark/40">âœ¦</span>
+      <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
     </div>
   </div>
 
@@ -305,11 +305,11 @@
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/40 mt-1">Fresh Brews</div>
             </div>
             <div>
-              <div class="font-display text-4xl text-nomads-sand font-light">âˆž</div>
+              <div class="font-display text-4xl text-nomads-sand font-light">☺︎</div>
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/40 mt-1">Good Vibes</div>
             </div>
             <div>
-              <div class="font-display text-4xl text-nomads-sand font-light">1</div>
+              <div class="font-display text-4xl text-nomads-sand font-light">1st</div>
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/40 mt-1">Community</div>
             </div>
           </div>
@@ -322,73 +322,73 @@
               
               <svg viewBox="0 0 400 533" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
                 
-                <rect width="400" height="533" fill="#2a1a0a"/>
+                <rect width="400" height="533" fill="#2f2b27"/>
                 
-                <rect y="400" width="400" height="133" fill="#1C130A"/>
+                <rect y="400" width="400" height="133" fill="#1f1d1a"/>
                 
-                <line x1="0" y1="420" x2="400" y2="420" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="0" y1="450" x2="400" y2="450" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="0" y1="480" x2="400" y2="480" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="0" y1="510" x2="400" y2="510" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="80" y1="400" x2="80" y2="533" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="160" y1="400" x2="160" y2="533" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="240" y1="400" x2="240" y2="533" stroke="#3B2712" stroke-width="0.5"/>
-                <line x1="320" y1="400" x2="320" y2="533" stroke="#3B2712" stroke-width="0.5"/>
+                <line x1="0" y1="420" x2="400" y2="420" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="0" y1="450" x2="400" y2="450" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="0" y1="480" x2="400" y2="480" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="0" y1="510" x2="400" y2="510" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="80" y1="400" x2="80" y2="533" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="160" y1="400" x2="160" y2="533" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="240" y1="400" x2="240" y2="533" stroke="#4a433b" stroke-width="0.5"/>
+                <line x1="320" y1="400" x2="320" y2="533" stroke="#4a433b" stroke-width="0.5"/>
                 
-                <rect x="120" y="60" width="160" height="200" rx="2" fill="none" stroke="#C9B99A" stroke-width="1.5" opacity="0.3"/>
-                <line x1="200" y1="60" x2="200" y2="260" stroke="#C9B99A" stroke-width="0.8" opacity="0.2"/>
-                <line x1="120" y1="160" x2="280" y2="160" stroke="#C9B99A" stroke-width="0.8" opacity="0.2"/>
+                <rect x="120" y="60" width="160" height="200" rx="2" fill="none" stroke="#bfb6a8" stroke-width="1.5" opacity="0.35"/>
+                <line x1="200" y1="60" x2="200" y2="260" stroke="#bfb6a8" stroke-width="0.8" opacity="0.25"/>
+                <line x1="120" y1="160" x2="280" y2="160" stroke="#bfb6a8" stroke-width="0.8" opacity="0.25"/>
                 
-                <rect x="122" y="62" width="77" height="97" fill="#C9B99A" opacity="0.04"/>
-                <rect x="202" y="62" width="76" height="97" fill="#C9B99A" opacity="0.03"/>
+                <rect x="122" y="62" width="77" height="97" fill="#bfb6a8" opacity="0.08"/>
+                <rect x="202" y="62" width="76" height="97" fill="#bfb6a8" opacity="0.06"/>
                 
-                <line x1="200" y1="0" x2="200" y2="50" stroke="#8C7055" stroke-width="1" opacity="0.6"/>
-                <ellipse cx="200" cy="55" rx="20" ry="8" fill="#3B2712" stroke="#8C7055" stroke-width="0.8" opacity="0.8"/>
-                <path d="M183 55 Q200 80 217 55" fill="#A0522D" opacity="0.4"/>
+                <line x1="200" y1="0" x2="200" y2="50" stroke="#8b8173" stroke-width="1" opacity="0.65"/>
+                <ellipse cx="200" cy="55" rx="20" ry="8" fill="#4a433b" stroke="#8b8173" stroke-width="0.8" opacity="0.85"/>
+                <path d="M183 55 Q200 80 217 55" fill="#75614d" opacity="0.5"/>
                 
-                <ellipse cx="200" cy="120" rx="60" ry="30" fill="#C9B99A" opacity="0.03"/>
+                <ellipse cx="200" cy="120" rx="60" ry="30" fill="#bfb6a8" opacity="0.06"/>
                 
-                <rect x="20" y="340" width="360" height="65" rx="2" fill="#3B2712" stroke="#8C7055" stroke-width="0.5" opacity="0.9"/>
+                <rect x="20" y="340" width="360" height="65" rx="2" fill="#4a433b" stroke="#8b8173" stroke-width="0.5" opacity="0.95"/>
                 
-                <rect x="20" y="340" width="360" height="8" rx="1" fill="#8C7055" opacity="0.4"/>
+                <rect x="20" y="340" width="360" height="8" rx="1" fill="#8b8173" opacity="0.5"/>
                 
-                <rect x="260" y="295" width="70" height="52" rx="3" fill="#1C130A" stroke="#8C7055" stroke-width="0.8" opacity="0.9"/>
-                <rect x="270" y="305" width="50" height="28" rx="2" fill="#3B2712" opacity="0.8"/>
-                <circle cx="295" cy="320" r="8" fill="none" stroke="#C9B99A" stroke-width="0.8" opacity="0.4"/>
-                <circle cx="295" cy="320" r="3" fill="#C9B99A" opacity="0.3"/>
-                <rect x="280" y="336" width="30" height="4" rx="1" fill="#8C7055" opacity="0.5"/>
+                <rect x="260" y="295" width="70" height="52" rx="3" fill="#1f1d1a" stroke="#8b8173" stroke-width="0.8" opacity="0.95"/>
+                <rect x="270" y="305" width="50" height="28" rx="2" fill="#4a433b" opacity="0.85"/>
+                <circle cx="295" cy="320" r="8" fill="none" stroke="#bfb6a8" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="295" cy="320" r="3" fill="#bfb6a8" opacity="0.35"/>
+                <rect x="280" y="336" width="30" height="4" rx="1" fill="#8b8173" opacity="0.6"/>
                 
-                <ellipse cx="180" cy="344" rx="10" ry="4" fill="#8C7055" opacity="0.5"/>
-                <path d="M172 344 L175 360 L185 360 L188 344" fill="#3B2712" stroke="#8C7055" stroke-width="0.5" opacity="0.8"/>
+                <ellipse cx="180" cy="344" rx="10" ry="4" fill="#8b8173" opacity="0.6"/>
+                <path d="M172 344 L175 360 L185 360 L188 344" fill="#4a433b" stroke="#8b8173" stroke-width="0.5" opacity="0.85"/>
                 
-                <rect x="30" y="370" width="80" height="5" rx="1" fill="#3B2712" stroke="#8C7055" stroke-width="0.5" opacity="0.7"/>
-                <rect x="50" y="375" width="4" height="30" rx="1" fill="#3B2712" opacity="0.6"/>
-                <rect x="86" y="375" width="4" height="30" rx="1" fill="#3B2712" opacity="0.6"/>
+                <rect x="30" y="370" width="80" height="5" rx="1" fill="#4a433b" stroke="#8b8173" stroke-width="0.5" opacity="0.8"/>
+                <rect x="50" y="375" width="4" height="30" rx="1" fill="#4a433b" opacity="0.7"/>
+                <rect x="86" y="375" width="4" height="30" rx="1" fill="#4a433b" opacity="0.7"/>
                 
-                <rect x="22" y="355" width="38" height="20" rx="3" fill="none" stroke="#8C7055" stroke-width="0.5" opacity="0.4"/>
-                <rect x="82" y="355" width="38" height="20" rx="3" fill="none" stroke="#8C7055" stroke-width="0.5" opacity="0.4"/>
+                <rect x="22" y="355" width="38" height="20" rx="3" fill="none" stroke="#8b8173" stroke-width="0.5" opacity="0.5"/>
+                <rect x="82" y="355" width="38" height="20" rx="3" fill="none" stroke="#8b8173" stroke-width="0.5" opacity="0.5"/>
                 
-                <rect x="350" y="310" width="8" height="35" rx="2" fill="#2a1a0a" stroke="#6B6B3A" stroke-width="0.5" opacity="0.8"/>
-                <ellipse cx="354" cy="308" rx="18" ry="22" fill="#6B6B3A" opacity="0.5"/>
-                <ellipse cx="362" cy="300" rx="10" ry="14" fill="#6B6B3A" opacity="0.4"/>
-                <ellipse cx="346" cy="302" rx="12" ry="16" fill="#6B6B3A" opacity="0.3"/>
+                <rect x="350" y="310" width="8" height="35" rx="2" fill="#2f2b27" stroke="#66705f" stroke-width="0.5" opacity="0.85"/>
+                <ellipse cx="354" cy="308" rx="18" ry="22" fill="#66705f" opacity="0.55"/>
+                <ellipse cx="362" cy="300" rx="10" ry="14" fill="#66705f" opacity="0.45"/>
+                <ellipse cx="346" cy="302" rx="12" ry="16" fill="#66705f" opacity="0.35"/>
                 
-                <rect x="50" y="180" width="80" height="4" rx="1" fill="#3B2712" stroke="#8C7055" stroke-width="0.5" opacity="0.6"/>
-                <rect x="55" y="160" width="12" height="20" rx="1" fill="#3B2712" opacity="0.5"/>
-                <rect x="72" y="162" width="10" height="18" rx="1" fill="#3B2712" opacity="0.4"/>
-                <rect x="88" y="158" width="14" height="22" rx="1" fill="#3B2712" opacity="0.5"/>
-                <rect x="107" y="163" width="11" height="17" rx="1" fill="#3B2712" opacity="0.4"/>
+                <rect x="50" y="180" width="80" height="4" rx="1" fill="#4a433b" stroke="#8b8173" stroke-width="0.5" opacity="0.7"/>
+                <rect x="55" y="160" width="12" height="20" rx="1" fill="#4a433b" opacity="0.6"/>
+                <rect x="72" y="162" width="10" height="18" rx="1" fill="#4a433b" opacity="0.5"/>
+                <rect x="88" y="158" width="14" height="22" rx="1" fill="#4a433b" opacity="0.6"/>
+                <rect x="107" y="163" width="11" height="17" rx="1" fill="#4a433b" opacity="0.5"/>
                 
-                <text x="200" y="490" font-family="serif" font-size="11" fill="#C9B99A" opacity="0.15" text-anchor="middle" letter-spacing="6">NOMADS Â· HINIGARAN</text>
+                <text x="200" y="490" font-family="serif" font-size="11" fill="#bfb6a8" opacity="0.22" text-anchor="middle" letter-spacing="6">NOMADS Ã‚Â· HINIGARAN</text>
               </svg>
               
-              <div class="absolute inset-0 bg-gradient-to-t from-nomads-char/60 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-nomads-char/45 to-transparent"></div>
             </div>
             
-            <div class="absolute -bottom-6 -left-6 bg-nomads-bark p-6 text-nomads-cream">
+            <div class="absolute -bottom-6 -left-6 bg-nomads-linen/85 border border-nomads-sand/25 p-6 text-nomads-char">
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase opacity-60 mb-1">Operating Hours</div>
               <div class="font-display text-2xl font-light">Open Daily</div>
-              <div class="font-mono text-xs text-nomads-sand/70 mt-1">9 AM - 9 PM</div>
+              <div class="font-mono text-xs text-nomads-bark/90 mt-1">10 AM - 10 PM</div>
             </div>
           </div>
         </div>
@@ -445,10 +445,10 @@
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
               <rect x="22" y="25" width="36" height="38" rx="3" fill="#3B2712"/>
-              <rect x="22" y="25" width="36" height="8" rx="2" fill="#8C7055" opacity="0.4"/>
-              <rect x="28" y="18" width="4" height="10" rx="1" fill="#8C7055" opacity="0.5"/>
-              <rect x="36" y="16" width="4" height="12" rx="1" fill="#8C7055" opacity="0.4"/>
-              <rect x="44" y="20" width="4" height="8" rx="1" fill="#8C7055" opacity="0.5"/>
+              <rect x="22" y="25" width="36" height="8" rx="2" fill="#8b8173" opacity="0.5"/>
+              <rect x="28" y="18" width="4" height="10" rx="1" fill="#8b8173" opacity="0.6"/>
+              <rect x="36" y="16" width="4" height="12" rx="1" fill="#8b8173" opacity="0.5"/>
+              <rect x="44" y="20" width="4" height="8" rx="1" fill="#8b8173" opacity="0.6"/>
               <ellipse cx="40" cy="62" rx="18" ry="5" fill="#8C7055" opacity="0.2"/>
             </svg>
           </div>
@@ -500,7 +500,7 @@
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
               <path d="M26 28 L30 62 L50 62 L54 28 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="28" rx="14" ry="5" fill="#6B6B3A" opacity="0.5"/>
+              <ellipse cx="40" cy="28" rx="14" ry="5" fill="#66705f" opacity="0.55"/>
               <rect x="30" y="18" width="4" height="12" rx="2" fill="#6B6B3A" opacity="0.6"/>
               <rect x="46" y="18" width="4" height="12" rx="2" fill="#6B6B3A" opacity="0.6"/>
               <ellipse cx="40" cy="48" rx="8" ry="6" fill="#6B6B3A" opacity="0.2"/>
@@ -518,8 +518,8 @@
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
               <path d="M24 30 L27 62 L53 62 L56 30 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="30" rx="16" ry="6" fill="#A0522D" opacity="0.4"/>
-              <ellipse cx="40" cy="30" rx="8" ry="3" fill="#C9B99A" opacity="0.15"/>
+              <ellipse cx="40" cy="30" rx="16" ry="6" fill="#75614d" opacity="0.5"/>
+              <ellipse cx="40" cy="30" rx="8" ry="3" fill="#bfb6a8" opacity="0.22"/>
               <path d="M40 14 Q45 8 50 14" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.3"/>
             </svg>
           </div>
@@ -541,7 +541,7 @@
               <rect x="42" y="40" width="8" height="8" rx="1" fill="#C9B99A" opacity="0.08"/>
               <rect x="32" y="48" width="8" height="8" rx="1" fill="#C9B99A" opacity="0.06"/>
               
-              <rect x="48" y="20" width="3" height="44" rx="1" fill="#8C7055" opacity="0.4"/>
+              <rect x="48" y="20" width="3" height="44" rx="1" fill="#8b8173" opacity="0.5"/>
             </svg>
           </div>
           <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Salted Caramel</h3>
@@ -556,17 +556,17 @@
         <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.35s">
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <rect x="15" y="40" width="50" height="6" rx="1" fill="#8C7055" opacity="0.4"/>
-              <rect x="20" y="24" width="40" height="16" rx="4" fill="#A0522D" opacity="0.4"/>
+              <rect x="15" y="40" width="50" height="6" rx="1" fill="#8b8173" opacity="0.5"/>
+              <rect x="20" y="24" width="40" height="16" rx="4" fill="#75614d" opacity="0.5"/>
               <ellipse cx="28" cy="32" rx="5" ry="5" fill="#C9B99A" opacity="0.1"/>
               <ellipse cx="40" cy="30" rx="6" ry="6" fill="#C9B99A" opacity="0.1"/>
               <ellipse cx="52" cy="32" rx="5" ry="5" fill="#C9B99A" opacity="0.1"/>
-              <rect x="20" y="40" width="40" height="6" rx="1" fill="#3B2712" opacity="0.6"/>
+              <rect x="20" y="40" width="40" height="6" rx="1" fill="#4a433b" opacity="0.7"/>
               <rect x="15" y="46" width="50" height="10" rx="2" fill="#3B2712"/>
             </svg>
           </div>
           <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Bacon & Egg Cheeseburger</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Toasted layers of flavor — a perfect coffee companion.</p>
+          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Toasted layers of flavor â€” a perfect coffee companion.</p>
           <div class="flex justify-between items-center">
             <span class="font-mono text-nomads-bark text-sm">₱200</span>
             <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">All Day</span>
@@ -576,10 +576,10 @@
         <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.4s">
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#3B2712" opacity="0.6"/>
-              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#A0522D" opacity="0.4"/>
+              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#4a433b" opacity="0.7"/>
+              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#75614d" opacity="0.5"/>
               <path d="M25 40 Q27 22 40 20 Q53 22 55 40" stroke="#C9B99A" stroke-width="0.5" fill="none" opacity="0.2"/>
-              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8C7055" opacity="0.4"/>
+              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8b8173" opacity="0.5"/>
             </svg>
           </div>
           <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Aligaisen Ramen</h3>
@@ -594,13 +594,13 @@
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
               <rect x="18" y="42" width="44" height="22" rx="3" fill="#3B2712"/>
-              <rect x="22" y="36" width="36" height="10" rx="2" fill="#A0522D" opacity="0.4"/>
+              <rect x="22" y="36" width="36" height="10" rx="2" fill="#75614d" opacity="0.5"/>
               <rect x="26" y="30" width="28" height="10" rx="2" fill="#8C7055" opacity="0.3"/>
               <ellipse cx="40" cy="28" rx="14" ry="5" fill="#C9B99A" opacity="0.08"/>
             </svg>
           </div>
           <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">NachoFries Overload</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Crispy nacho fries loaded with cheese, jalapeños, and our signature sauce.</p>
+          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Crispy nacho fries loaded with cheese, jalapeÃ±os, and our signature sauce.</p>
           <div class="flex justify-between items-center">
             <span class="font-mono text-nomads-bark text-sm">₱140</span>
             <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Breakfast</span>
@@ -612,8 +612,8 @@
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
               <path d="M20 28 L24 62 L56 62 L60 28 Z" fill="#3B2712"/>
               <ellipse cx="40" cy="28" rx="20" ry="7" fill="#8C7055" opacity="0.3"/>
-              <rect x="36" y="12" width="3" height="18" rx="1" fill="#8C7055" opacity="0.5"/>
-              <rect x="42" y="12" width="3" height="18" rx="1" fill="#8C7055" opacity="0.4"/>
+              <rect x="36" y="12" width="3" height="18" rx="1" fill="#8b8173" opacity="0.6"/>
+              <rect x="42" y="12" width="3" height="18" rx="1" fill="#8b8173" opacity="0.5"/>
               
               <rect x="28" y="36" width="9" height="9" rx="1" fill="#C9B99A" opacity="0.07"/>
               <rect x="42" y="38" width="9" height="9" rx="1" fill="#C9B99A" opacity="0.07"/>
@@ -627,13 +627,13 @@
           </div>
         </div>
 
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="non-coffee" style="transition-delay:0.55s">
+        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.55s">
           <div class="mb-4">
             <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#3B2712" opacity="0.6"/>
-              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#A0522D" opacity="0.4"/>
+              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#4a433b" opacity="0.7"/>
+              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#75614d" opacity="0.5"/>
               <path d="M25 40 Q27 22 40 20 Q53 22 55 40" stroke="#C9B99A" stroke-width="0.5" fill="none" opacity="0.2"/>
-              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8C7055" opacity="0.4"/>
+              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8b8173" opacity="0.5"/>
             </svg>
           </div>
           <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Dubai Chewy Cookie</h3>
@@ -683,7 +683,7 @@
         <div class="relative overflow-hidden bg-nomads-espresso aspect-square border border-nomads-sand/10">
           <img src="assets/img/1.jpg" alt="reading nook" srcset="">
           <div class="absolute inset-0 bg-gradient-to-t from-nomads-char/70 to-transparent flex items-end p-4">
-            <div class="font-display text-xl text-nomads-cream font-light">Reading Nook</div>
+            <div class="font-display text-xl text-nomads-cream font-light">Reading Book</div>
           </div>
         </div>
 
@@ -691,7 +691,7 @@
         
         <div class="col-span-2 relative overflow-hidden bg-nomads-espresso border border-nomads-sand/10" style="aspect-ratio: 2/1;">
           <img src="assets/img/4.jpg" alt="social space" srcset="" class="object-cover w-full h-full">
-          <div class="absolute inset-0 bg-gradient-to-r from-nomads-char/60 to-transparent flex items-center p-8">
+          <div class="absolute inset-0 bg-gradient-to-r from-nomads-char/45 to-transparent flex items-center p-8">
             <div>
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/50 mb-1">Social Space</div>
               <div class="font-display text-2xl text-nomads-cream font-light italic">Gather over coffee.</div>
@@ -801,9 +801,9 @@
         </div>
       </div>
       <div class="mt-10 pt-6 border-t border-nomads-sand/5 flex flex-col md:flex-row justify-between gap-2">
-        <p class="font-mono text-[10px] text-nomads-sand/20 tracking-widest">© 2025 NOMADS COFFEE ~ ALL RIGHTS RESERVED</p>
-        <p class="font-mono text-[10px] text-nomads-sand/15 tracking-widest">10.2709° N · 122.8488° E</p>
-        <p class="font-mono text-[10px] text-nomads-sand/15 tracking-widest">Made with ❤️ by <a href="https://github.com/joshcolored" target="_blank" rel="noopener noreferrer" class="hover:text-nomads-sand underline">Joshcolored</a></p>
+        <p class="font-mono text-[10px] text-nomads-sand/40 tracking-widest">© 2025 NOMADS COFFEE ~ ALL RIGHTS RESERVED</p>
+        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">10.2709° N · 122.8488° E</p>
+        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">Created with ❤️ by <a href="https://github.com/joshcolored" target="_blank" rel="noopener noreferrer" class="hover:text-nomads-sand underline">Joshcolored</a></p>
       </div>
     </div>
   </footer>
