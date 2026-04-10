@@ -167,6 +167,43 @@
     .map-frame {
       border: 1px solid rgba(180,171,157,0.24);
     }
+
+    .menu-shot {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(180,171,157,0.2);
+      background: rgba(56,52,47,0.45);
+      cursor: pointer;
+      transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.35s ease;
+    }
+    .menu-shot:hover {
+      transform: translateY(-4px);
+      border-color: rgba(180,171,157,0.45);
+    }
+    .menu-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.5s ease;
+      filter: saturate(0.9) contrast(1.02);
+    }
+    .menu-shot:hover img {
+      transform: scale(1.04);
+      filter: saturate(1) contrast(1.06);
+    }
+    .menu-shot-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(24,23,21,0.75), rgba(24,23,21,0.12) 55%, transparent);
+    }
+    .menu-lightbox {
+      background: rgba(10,10,10,0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    body.no-scroll {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="grain font-sans antialiased">
@@ -223,15 +260,15 @@
     </div>
     
     <div class="absolute top-32 right-6 md:right-12 font-mono text-[10px] text-nomads-sand/40 tracking-widest text-right animate-fade-in delay-800">
-      <div>10.2709° N</div>
-      <div>122.8488° E</div>
+      <div>10.2709Â° N</div>
+      <div>122.8488Â° E</div>
       <div class="mt-1">HINIGARAN, NEG. OCC.</div>
     </div>
 
     
     <div class="relative max-w-7xl mx-auto w-full">
       <p class="font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/50 mb-6 animate-fade-up delay-100">
-        Est. Hinigaran · Negros Occidental
+        Est. Hinigaran Â· Negros Occidental
       </p>
       <h1 class="hero-tagline font-display font-light text-nomads-cream animate-fade-up delay-200">
         Where<br/>
@@ -263,7 +300,7 @@
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Hinigaran, Negros Occidental</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
-      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Contemporary CafÃ©</span>
+      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Contemporary CafÃƒÂ©</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Good Vibes Only</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
@@ -271,7 +308,7 @@
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 mt-2 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Hinigaran, Negros Occidental</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
-      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Brutalist CafÃ©</span>
+      <span class="mx-8 font-display font-light italic text-nomads-sand/40 text-lg">Brutalist CafÃƒÂ©</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
       <span class="mx-8 font-mono text-[11px] tracking-[0.3em] uppercase text-nomads-sand/30">Good Vibes Only</span>
       <span class="mx-4 mt-1 text-nomads-bark/40">&</span>
@@ -305,7 +342,7 @@
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/40 mt-1">Fresh Brews</div>
             </div>
             <div>
-              <div class="font-display text-4xl text-nomads-sand font-light">☺︎</div>
+              <div class="font-display text-4xl text-nomads-sand font-light">â˜ºï¸Ž</div>
               <div class="font-mono text-[10px] tracking-[0.2em] uppercase text-nomads-sand/40 mt-1">Good Vibes</div>
             </div>
             <div>
@@ -379,7 +416,7 @@
                 <rect x="88" y="158" width="14" height="22" rx="1" fill="#4a433b" opacity="0.6"/>
                 <rect x="107" y="163" width="11" height="17" rx="1" fill="#4a433b" opacity="0.5"/>
                 
-                <text x="200" y="490" font-family="serif" font-size="11" fill="#bfb6a8" opacity="0.22" text-anchor="middle" letter-spacing="6">NOMADS Ã‚Â· HINIGARAN</text>
+                <text x="200" y="490" font-family="serif" font-size="11" fill="#bfb6a8" opacity="0.22" text-anchor="middle" letter-spacing="6">NOMADS Ãƒâ€šÃ‚Â· HINIGARAN</text>
               </svg>
               
               <div class="absolute inset-0 bg-gradient-to-t from-nomads-char/45 to-transparent"></div>
@@ -397,7 +434,7 @@
   </section>
 
   
-  <section id="menu" class="py-28 px-6 bg-nomads-espresso/20 relative overflow-hidden">
+    <section id="menu" class="py-28 px-6 bg-nomads-espresso/20 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-mono text-[10px] tracking-[0.35em] uppercase text-nomads-bark mb-4">What We Offer</p>
@@ -405,249 +442,63 @@
           <h2 class="font-display font-light text-5xl md:text-6xl text-nomads-cream">
             Our <em>Menu</em>
           </h2>
-          <p class="font-light text-nomads-sand/50 text-sm max-w-xs text-right hidden md:block">
-            Crafted with care, served with warmth.
+          <p class="font-light text-nomads-sand/55 text-sm max-w-sm text-right hidden md:block">
+            Tap any menu page to open it in a full-screen viewer.
           </p>
         </div>
         <div class="divider mt-6"></div>
       </div>
 
-      
-      <div class="reveal flex gap-2 mb-12 overflow-x-auto pb-2" id="menu-tabs">
-        <button onclick="filterMenu('all')" class="tab-btn active-tab font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 border transition-all duration-300" data-cat="all">All</button>
-        <button onclick="filterMenu('espresso')" class="tab-btn font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 border border-nomads-sand/20 text-nomads-sand/50 hover:border-nomads-sand/50 hover:text-nomads-sand transition-all duration-300" data-cat="espresso">Espresso</button>
-        <button onclick="filterMenu('non-coffee')" class="tab-btn font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 border border-nomads-sand/20 text-nomads-sand/50 hover:border-nomads-sand/50 hover:text-nomads-sand transition-all duration-300" data-cat="non-coffee">Non-Coffee</button>
-        <button onclick="filterMenu('food')" class="tab-btn font-mono text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 border border-nomads-sand/20 text-nomads-sand/50 hover:border-nomads-sand/50 hover:text-nomads-sand transition-all duration-300" data-cat="food">Food</button>
+      <div class="reveal mb-10 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="border border-nomads-sand/20 bg-nomads-char/30 py-5 px-3">
+          <div class="font-display text-3xl text-nomads-cream">15</div>
+          <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/45 mt-1">Menu Pages</div>
+        </div>
+        <div class="border border-nomads-sand/20 bg-nomads-char/30 py-5 px-3">
+          <div class="font-display text-3xl text-nomads-cream">Tap</div>
+          <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/45 mt-1">To Zoom</div>
+        </div>
+        <div class="border border-nomads-sand/20 bg-nomads-char/30 py-5 px-3">
+          <div class="font-display text-3xl text-nomads-cream">Swipe</div>
+          <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/45 mt-1">Browse Pages</div>
+        </div>
+        <div class="border border-nomads-sand/20 bg-nomads-char/30 py-5 px-3">
+          <div class="font-display text-3xl text-nomads-cream">Live</div>
+          <div class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/45 mt-1">At NOMADS</div>
+        </div>
       </div>
 
-      
-      <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="55" rx="22" ry="8" fill="#8C7055" opacity="0.3"/>
-              <path d="M20 30 Q40 18 60 30 L58 52 Q40 60 22 52 Z" fill="#3B2712"/>
-              <path d="M22 32 Q40 22 58 32" stroke="#8C7055" stroke-width="0.8" fill="none" opacity="0.5"/>
-              <path d="M38 20 Q42 10 46 20" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.3"/>
-              <path d="M30 18 Q34 6 38 18" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.2"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Espresso</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Pure, bold, and unapologetic. A shot of clarity in every sip.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱50 - ₱85</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Hot</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso" style="transition-delay:0.05s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <rect x="22" y="25" width="36" height="38" rx="3" fill="#3B2712"/>
-              <rect x="22" y="25" width="36" height="8" rx="2" fill="#8b8173" opacity="0.5"/>
-              <rect x="28" y="18" width="4" height="10" rx="1" fill="#8b8173" opacity="0.6"/>
-              <rect x="36" y="16" width="4" height="12" rx="1" fill="#8b8173" opacity="0.5"/>
-              <rect x="44" y="20" width="4" height="8" rx="1" fill="#8b8173" opacity="0.6"/>
-              <ellipse cx="40" cy="62" rx="18" ry="5" fill="#8C7055" opacity="0.2"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Americano</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Espresso stretched with hot water. A smooth and deeply satisfying.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱60</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Hot / Iced</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso" style="transition-delay:0.1s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="62" rx="18" ry="5" fill="#8C7055" opacity="0.2"/>
-              <path d="M24 30 L24 58 Q24 62 28 62 L52 62 Q56 62 56 58 L56 30 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="30" rx="16" ry="6" fill="#8C7055" opacity="0.3"/>
-              <ellipse cx="40" cy="30" rx="10" ry="4" fill="#C9B99A" opacity="0.08"/>
-              <path d="M56 40 Q66 38 66 48 Q66 56 56 54" stroke="#8C7055" stroke-width="1.2" fill="none" opacity="0.5"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Spanish Latte</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Velvety steamed milk meets espresso in a beautiful morning ritual.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱75</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Hot / Iced</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso" style="transition-delay:0.15s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <path d="M24 30 L24 58 Q24 62 28 62 L52 62 Q56 62 56 58 L56 30 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="30" rx="16" ry="6" fill="#8C7055" opacity="0.3"/>
-              <path d="M30 36 Q40 42 50 36" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.2"/>
-              <path d="M32 42 Q40 46 48 42" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.15"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Iced Cappuccino</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Equal thirds of espresso, steamed milk, and frothy foam.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱70</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Iced</span>
-          </div>
-        </div>
-
-        
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="non-coffee" style="transition-delay:0.2s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <path d="M26 28 L30 62 L50 62 L54 28 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="28" rx="14" ry="5" fill="#66705f" opacity="0.55"/>
-              <rect x="30" y="18" width="4" height="12" rx="2" fill="#6B6B3A" opacity="0.6"/>
-              <rect x="46" y="18" width="4" height="12" rx="2" fill="#6B6B3A" opacity="0.6"/>
-              <ellipse cx="40" cy="48" rx="8" ry="6" fill="#6B6B3A" opacity="0.2"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Matcha-Espresso Fusion</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Ceremonial-grade matcha, steamed oat milk, a gentle earthiness.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱130</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Iced</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso" style="transition-delay:0.25s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <path d="M24 30 L27 62 L53 62 L56 30 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="30" rx="16" ry="6" fill="#75614d" opacity="0.5"/>
-              <ellipse cx="40" cy="30" rx="8" ry="3" fill="#bfb6a8" opacity="0.22"/>
-              <path d="M40 14 Q45 8 50 14" stroke="#C9B99A" stroke-width="0.8" fill="none" opacity="0.3"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Pamukaw</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Strong dark roast & perfectly sweetened coffee</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱85</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Hot</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="espresso" style="transition-delay:0.3s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <path d="M24 28 L28 62 L52 62 L56 28 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="28" rx="16" ry="6" fill="#8C7055" opacity="0.3"/>
-              
-              <rect x="30" y="36" width="8" height="8" rx="1" fill="#C9B99A" opacity="0.08"/>
-              <rect x="42" y="40" width="8" height="8" rx="1" fill="#C9B99A" opacity="0.08"/>
-              <rect x="32" y="48" width="8" height="8" rx="1" fill="#C9B99A" opacity="0.06"/>
-              
-              <rect x="48" y="20" width="3" height="44" rx="1" fill="#8b8173" opacity="0.5"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Salted Caramel</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Full creamed milk, espresso, and salted caramel.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱85</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Iced</span>
-          </div>
-        </div>
-
-        
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.35s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <rect x="15" y="40" width="50" height="6" rx="1" fill="#8b8173" opacity="0.5"/>
-              <rect x="20" y="24" width="40" height="16" rx="4" fill="#75614d" opacity="0.5"/>
-              <ellipse cx="28" cy="32" rx="5" ry="5" fill="#C9B99A" opacity="0.1"/>
-              <ellipse cx="40" cy="30" rx="6" ry="6" fill="#C9B99A" opacity="0.1"/>
-              <ellipse cx="52" cy="32" rx="5" ry="5" fill="#C9B99A" opacity="0.1"/>
-              <rect x="20" y="40" width="40" height="6" rx="1" fill="#4a433b" opacity="0.7"/>
-              <rect x="15" y="46" width="50" height="10" rx="2" fill="#3B2712"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Bacon & Egg Cheeseburger</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Toasted layers of flavor â€” a perfect coffee companion.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱200</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">All Day</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.4s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#4a433b" opacity="0.7"/>
-              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#75614d" opacity="0.5"/>
-              <path d="M25 40 Q27 22 40 20 Q53 22 55 40" stroke="#C9B99A" stroke-width="0.5" fill="none" opacity="0.2"/>
-              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8b8173" opacity="0.5"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Aligaisen Ramen</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Aligue based broth with noodles, eggs, and toppings.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱180</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Lunch ~ Dinner</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.45s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <rect x="18" y="42" width="44" height="22" rx="3" fill="#3B2712"/>
-              <rect x="22" y="36" width="36" height="10" rx="2" fill="#75614d" opacity="0.5"/>
-              <rect x="26" y="30" width="28" height="10" rx="2" fill="#8C7055" opacity="0.3"/>
-              <ellipse cx="40" cy="28" rx="14" ry="5" fill="#C9B99A" opacity="0.08"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">NachoFries Overload</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">Crispy nacho fries loaded with cheese, jalapeÃ±os, and our signature sauce.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱140</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">Breakfast</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.5s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <path d="M20 28 L24 62 L56 62 L60 28 Z" fill="#3B2712"/>
-              <ellipse cx="40" cy="28" rx="20" ry="7" fill="#8C7055" opacity="0.3"/>
-              <rect x="36" y="12" width="3" height="18" rx="1" fill="#8b8173" opacity="0.6"/>
-              <rect x="42" y="12" width="3" height="18" rx="1" fill="#8b8173" opacity="0.5"/>
-              
-              <rect x="28" y="36" width="9" height="9" rx="1" fill="#C9B99A" opacity="0.07"/>
-              <rect x="42" y="38" width="9" height="9" rx="1" fill="#C9B99A" opacity="0.07"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Creamy Garlic Spinach</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">A velvety blend of creamy texture and aromatic garlic, perfectly balanced with fresh spinach.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱115</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">All Day</span>
-          </div>
-        </div>
-
-        <div class="menu-card reveal bg-nomads-char border border-nomads-sand/10 p-6" data-cat="food" style="transition-delay:0.55s">
-          <div class="mb-4">
-            <svg viewBox="0 0 80 80" class="w-12 h-12 opacity-50">
-              <ellipse cx="40" cy="55" rx="25" ry="8" fill="#4a433b" opacity="0.7"/>
-              <path d="M20 45 Q22 20 40 18 Q58 20 60 45 Z" fill="#75614d" opacity="0.5"/>
-              <path d="M25 40 Q27 22 40 20 Q53 22 55 40" stroke="#C9B99A" stroke-width="0.5" fill="none" opacity="0.2"/>
-              <ellipse cx="40" cy="18" rx="8" ry="4" fill="#8b8173" opacity="0.5"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-2xl text-nomads-cream font-light mb-1">Dubai Chewy Cookie</h3>
-          <p class="text-nomads-sand/50 text-xs font-light mb-4 leading-relaxed">A chewy, indulgent treat with a hint of vanilla and a sprinkle of cinnamon.</p>
-          <div class="flex justify-between items-center">
-            <span class="font-mono text-nomads-bark text-sm">₱150</span>
-            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/30">All Day</span>
-          </div>
-        </div>
+      <div id="menu-gallery" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
+      <div class="mt-8 text-center">
+        <button id="menu-more-btn" class="border border-nomads-sand/35 text-nomads-sand text-[10px] tracking-[0.2em] uppercase px-6 py-3 hover:bg-nomads-sand hover:text-nomads-char transition-all duration-300">
+          Show More
+        </button>
       </div>
     </div>
   </section>
 
-  
+  <div id="menu-lightbox" class="menu-lightbox fixed inset-0 z-[100] hidden items-center justify-center px-4 py-8">
+    <button id="menu-lightbox-close" class="absolute top-6 right-6 border border-nomads-sand/40 text-nomads-cream text-[10px] tracking-[0.2em] uppercase px-4 py-2 hover:bg-nomads-sand hover:text-nomads-char transition-all duration-300">
+      Close
+    </button>
+    <button id="menu-lightbox-prev" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 border border-nomads-sand/40 text-nomads-cream hover:bg-nomads-sand hover:text-nomads-char transition-all duration-300" aria-label="Previous menu page">
+      &#8592;
+    </button>
+    <button id="menu-lightbox-next" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 border border-nomads-sand/40 text-nomads-cream hover:bg-nomads-sand hover:text-nomads-char transition-all duration-300" aria-label="Next menu page">
+      &#8594;
+    </button>
+
+    <div class="w-full max-w-5xl">
+      <div class="border border-nomads-sand/30 bg-nomads-char/40 p-2 md:p-3">
+        <img id="menu-lightbox-image" src="" alt="Nomads menu page" class="w-full max-h-[78vh] object-contain mx-auto" />
+      </div>
+      <div class="mt-4 flex items-center justify-between text-nomads-sand/75">
+        <p id="menu-lightbox-title" class="font-display text-2xl"></p>
+        <p id="menu-lightbox-counter" class="font-mono text-[10px] tracking-[0.2em] uppercase"></p>
+      </div>
+    </div>
+  </div>
+
   <section id="vibe" class="py-28 px-6 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
@@ -749,7 +600,7 @@
           <div>
             <div class="font-mono text-[10px] tracking-[0.25em] uppercase text-nomads-bark mb-3">Coordinates</div>
             <div class="font-mono text-sm text-nomads-sand/60">
-              10.2709° N, 122.8488° E
+              10.2709Â° N, 122.8488Â° E
             </div>
           </div>
           <div class="w-full h-px bg-nomads-sand/10"></div>
@@ -801,9 +652,9 @@
         </div>
       </div>
       <div class="mt-10 pt-6 border-t border-nomads-sand/5 flex flex-col md:flex-row justify-between gap-2">
-        <p class="font-mono text-[10px] text-nomads-sand/40 tracking-widest">© 2025 NOMADS COFFEE ~ ALL RIGHTS RESERVED</p>
-        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">10.2709° N · 122.8488° E</p>
-        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">Created with ❤️ by <a href="https://github.com/joshcolored" target="_blank" rel="noopener noreferrer" class="hover:text-nomads-sand underline">Joshcolored</a></p>
+        <p class="font-mono text-[10px] text-nomads-sand/40 tracking-widest">Â© 2025 NOMADS COFFEE ~ ALL RIGHTS RESERVED</p>
+        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">10.2709Â° N Â· 122.8488Â° E</p>
+        <p class="font-mono text-[10px] text-nomads-sand/35 tracking-widest">Created with â¤ï¸ by <a href="https://github.com/joshcolored" target="_blank" rel="noopener noreferrer" class="hover:text-nomads-sand underline">Joshcolored</a></p>
       </div>
     </div>
   </footer>
@@ -827,35 +678,121 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => io.observe(el));
 
-    
-    function filterMenu(cat) {
-      
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        const isActive = btn.dataset.cat === cat;
-        btn.classList.toggle('active-tab', isActive);
-        btn.classList.toggle('bg-nomads-bark', isActive);
-        btn.classList.toggle('border-nomads-bark', isActive);
-        btn.classList.toggle('text-nomads-cream', isActive);
-        btn.classList.toggle('border-nomads-sand/20', !isActive);
-        btn.classList.toggle('text-nomads-sand/50', !isActive);
+    const menuPages = Array.from({ length: 15 }, (_, i) => ({
+      src: `assets/menu/${i + 1}.jpg`,
+      title: `Menu Page ${i + 1}`
+    }));
+
+    const menuGallery = document.getElementById('menu-gallery');
+    const menuLightbox = document.getElementById('menu-lightbox');
+    const menuLightboxImage = document.getElementById('menu-lightbox-image');
+    const menuLightboxTitle = document.getElementById('menu-lightbox-title');
+    const menuLightboxCounter = document.getElementById('menu-lightbox-counter');
+    const menuLightboxPrev = document.getElementById('menu-lightbox-prev');
+    const menuLightboxNext = document.getElementById('menu-lightbox-next');
+    const menuLightboxClose = document.getElementById('menu-lightbox-close');
+    let activeMenuIndex = 0;
+    let menuExpanded = false;
+    const menuPreviewMobile = 5;
+    const menuPreviewDesktop = 8;
+
+    function getMenuPreviewCount() {
+      return window.innerWidth >= 1024 ? menuPreviewDesktop : menuPreviewMobile;
+    }
+
+    function renderMenuGallery() {
+      if (!menuGallery) return;
+      const menuPreviewCount = getMenuPreviewCount();
+      const visiblePages = menuExpanded ? menuPages : menuPages.slice(0, menuPreviewCount);
+      menuGallery.innerHTML = visiblePages.map((page, index) => `
+        <button type="button" class="menu-shot reveal aspect-[4/5] text-left" data-menu-index="${index}">
+          <img src="${page.src}" alt="${page.title}" loading="lazy" />
+          <span class="menu-shot-overlay"></span>
+          <span class="absolute left-4 right-4 bottom-4 flex items-end justify-between">
+            <span class="font-display text-2xl text-nomads-cream">Page ${index + 1}</span>
+            <span class="font-mono text-[9px] tracking-[0.2em] uppercase text-nomads-sand/80">Tap to View</span>
+          </span>
+        </button>
+      `).join('');
+
+      menuGallery.querySelectorAll('.menu-shot.reveal').forEach((el) => io.observe(el));
+      menuGallery.querySelectorAll('[data-menu-index]').forEach((btn) => {
+        btn.addEventListener('click', () => openMenuLightbox(Number(btn.dataset.menuIndex)));
       });
 
-      
-      document.querySelectorAll('#menu-grid [data-cat]').forEach(card => {
-        const show = cat === 'all' || card.dataset.cat === cat;
-        card.style.display = show ? '' : 'none';
-        if (show) {
-          setTimeout(() => card.classList.add('visible'), 10);
+      const menuMoreBtn = document.getElementById('menu-more-btn');
+      if (menuMoreBtn) {
+        if (menuPages.length <= menuPreviewCount) {
+          menuMoreBtn.classList.add('hidden');
+        } else {
+          menuMoreBtn.classList.remove('hidden');
+          menuMoreBtn.textContent = menuExpanded ? 'Show Less' : 'Show More';
         }
+      }
+    }
+
+    function updateMenuLightbox() {
+      const page = menuPages[activeMenuIndex];
+      menuLightboxImage.src = page.src;
+      menuLightboxImage.alt = page.title;
+      menuLightboxTitle.textContent = page.title;
+      menuLightboxCounter.textContent = `${activeMenuIndex + 1} / ${menuPages.length}`;
+    }
+
+    function openMenuLightbox(index) {
+      activeMenuIndex = index;
+      updateMenuLightbox();
+      menuLightbox.classList.remove('hidden');
+      menuLightbox.classList.add('flex');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeMenuLightbox() {
+      menuLightbox.classList.add('hidden');
+      menuLightbox.classList.remove('flex');
+      document.body.classList.remove('no-scroll');
+    }
+
+    function showPrevMenu() {
+      activeMenuIndex = (activeMenuIndex - 1 + menuPages.length) % menuPages.length;
+      updateMenuLightbox();
+    }
+
+    function showNextMenu() {
+      activeMenuIndex = (activeMenuIndex + 1) % menuPages.length;
+      updateMenuLightbox();
+    }
+
+    renderMenuGallery();
+
+    const menuMoreBtn = document.getElementById('menu-more-btn');
+    if (menuMoreBtn) {
+      menuMoreBtn.addEventListener('click', () => {
+        menuExpanded = !menuExpanded;
+        renderMenuGallery();
       });
     }
 
-    
-    const firstTab = document.querySelector('.tab-btn');
-    if (firstTab) {
-      firstTab.classList.add('bg-nomads-bark', 'border-nomads-bark', 'text-nomads-cream');
-      firstTab.classList.remove('border-nomads-sand/20', 'text-nomads-sand/50');
+    window.addEventListener('resize', () => {
+      if (!menuExpanded) renderMenuGallery();
+    });
+
+    if (menuLightboxPrev) menuLightboxPrev.addEventListener('click', showPrevMenu);
+    if (menuLightboxNext) menuLightboxNext.addEventListener('click', showNextMenu);
+    if (menuLightboxClose) menuLightboxClose.addEventListener('click', closeMenuLightbox);
+
+    if (menuLightbox) {
+      menuLightbox.addEventListener('click', (e) => {
+        if (e.target === menuLightbox) closeMenuLightbox();
+      });
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (!menuLightbox || menuLightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeMenuLightbox();
+      if (e.key === 'ArrowLeft') showPrevMenu();
+      if (e.key === 'ArrowRight') showNextMenu();
+    });
 
     
     window.addEventListener('scroll', () => {
